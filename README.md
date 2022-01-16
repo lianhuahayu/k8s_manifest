@@ -7,7 +7,7 @@ kubectl delete -f ./k8s/odoo/.
 kubectl delete -f ./k8s/db/.
 kubectl delete -f ./k8s/namespace/.
 
-rm rf -R k8s
+rm -rf k8s
 
 mkdir k8s
 git clone https://github.com/Yellow-carpet/k8s_manifest.git ./k8s
