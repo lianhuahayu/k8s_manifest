@@ -1,5 +1,8 @@
 # k8s_manifest
+Les dossiers de ce repo représentes l'ensemble des manifests utilisés pour le déploiement de notre application.\
 
+Ce readme contient aussi les commandes kubernetes qui vont être lancés sur jenkins afin de créer l'ensemble de nos ressources pour acceder à notre site web.\
+Ces commandes representent des commandes de nétoyage d'environnement ou bien de création de ressources.
 ```
 kubectl delete -f ./k8s/ic-webapp/.
 kubectl delete -f ./k8s/pgadmin/.
