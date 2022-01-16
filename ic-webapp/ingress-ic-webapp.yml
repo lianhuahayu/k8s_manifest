@@ -10,7 +10,7 @@ metadata:
     createur: capgemini
 spec:
   rules:
-  - host: ec2-54-235-230-173.compute-1.amazonaws.com
+  - host: myapp
     http:
       paths:
       - path: /
