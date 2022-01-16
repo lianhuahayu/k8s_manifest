@@ -17,4 +17,10 @@ kubectl apply -f ./k8s/db/.
 kubectl apply -f ./k8s/odoo/.
 kubectl apply -f ./k8s/pgadmin/.
 kubectl apply -f ./k8s/ic-webapp/.
+
+docker rmi dpage/pgadmin4:latest
+docker rmi lianhuahayu/ic-webapp:1.0
+docker rmi odoo:13
+docker rmi postgres:13
+ 
 ```
