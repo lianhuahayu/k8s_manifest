@@ -1,11 +1,11 @@
 # k8s_manifest
 
 ```
-kubectl delete-f ./k8s/ic-webapp/.
-kubectl delete-f ./k8s/pgadmin/.
-kubectl delete-f ./k8s/odoo/.
-kubectl delete-f ./k8s/db/.
-kubectl delete-f ./k8s/namespace/.
+kubectl delete -f ./k8s/ic-webapp/.
+kubectl delete -f ./k8s/pgadmin/.
+kubectl delete -f ./k8s/odoo/.
+kubectl delete -f ./k8s/db/.
+kubectl delete -f ./k8s/namespace/.
 
 rm rf -R k8s
 
