@@ -1,6 +1,6 @@
  #!/bin/bash
   sudo hostnamectl set-hostname minikube-master
-  echo "127.0.0.1 minikube-master" >> /etc/hosts
+  sudo sh -c "echo '127.0.0.1 minikube-master' >> /etc/hosts"
   sudo apt-get -y update
   sudo apt install -y qemu qemu-kvm libvirt-daemon libvirt-clients bridge-utils virt-manager
   sudo apt-get install -y socat
@@ -20,4 +20,4 @@
   #sudo chmod 666 /var/run/docker.sock
   sudo systemctl enable docker.service
   minikube status
-  sudo sh -c "echo '$(curl ifconfig.me)'  http://myapp.icgroup.com" >> /etc/hosts
+  sudo sh -c 'echo "$(curl ifconfig.me)  http://myapp.icgroup.com" >> /etc/hosts'
