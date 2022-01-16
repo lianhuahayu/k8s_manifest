@@ -20,4 +20,3 @@
   #sudo chmod 666 /var/run/docker.sock
   sudo systemctl enable docker.service
   minikube status
-  sudo sh -c 'echo "$(curl ifconfig.me)  http://myapp.icgroup.com" >> /etc/hosts'
