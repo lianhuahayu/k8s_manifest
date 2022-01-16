@@ -29,6 +29,6 @@ spec:
             - containerPort: 8080
           env:
             - name: ODOO_URL
-              value: myapp:32020
+              value: myapp.com:32020
             - name: PGADMIN_URL
-              value:  myapp:32125
+              value:  myapp.com:32125
