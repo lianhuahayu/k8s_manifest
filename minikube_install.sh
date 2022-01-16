@@ -17,6 +17,7 @@
   sudo chmod +x kubectl
   sudo mv kubectl  /usr/bin/
   sudo echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
-  #sudo chmod 666 /var/run/docker.sock
+  sudo chmod 666 /var/run/docker.sock
   sudo systemctl enable docker.service
   minikube status
+  sudo sh -c 'echo "$(curl ifconfig.me)  http://myapp.icgroup.com" >> /etc/hosts'
