@@ -18,4 +18,6 @@
   sudo mv kubectl  /usr/bin/
   sudo echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
   sudo systemctl enable docker.service
+  minikube status
   minikube start --driver=none
+  minikube status
