@@ -1,7 +1,6 @@
 # k8s_manifest
 
-
-
+```
 kubectl delete-f ./k8s/ic-webapp/.
 kubectl delete-f ./k8s/pgadmin/.
 kubectl delete-f ./k8s/odoo/.
@@ -18,3 +17,4 @@ kubectl apply -f ./k8s/db/.
 kubectl apply -f ./k8s/odoo/.
 kubectl apply -f ./k8s/pgadmin/.
 kubectl apply -f ./k8s/ic-webapp/.
+```
