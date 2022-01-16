@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: db-pod
+  namespace: icgroup
+  labels:
+    app: db_odoo
+    env: prod
+spec:
+  containers:
+    - name: postgres
+      image: postgres:13
+      env:
+        - name: POSTGRES_DB
+          value: postgres
+        - name: POSTGRES_USER
+          value: odoo
+        - name: POSTGRES_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: db-secret
+              key: db-passwrd
+      volumeMounts:
+        - mountPath: /var/lib/postgresql/data
+          name: db-volume
+
+  volumes:
+    - name : db-volume
+      persistentVolumeClaim:
+        claimName: db-pvc

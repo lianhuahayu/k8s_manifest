@@ -1,0 +1,22 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ic-webapp-ingress
+  namespace: icgroup
+  labels:
+    env: prod
+    type: ingress
+    createur: capgemini
+spec:
+  rules:
+  - host: ec2-54-235-230-173.compute-1.amazonaws.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: clusterip-ic-webapp
+            port:
+              number: 80

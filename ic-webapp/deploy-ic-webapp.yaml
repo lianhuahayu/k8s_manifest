@@ -1,0 +1,34 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-ic-webapp
+  namespace: icgroup
+  labels:
+    env: prod
+spec:
+  strategy:
+    type: Recreate
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ic-webapp
+  template:
+    metadata:
+      name: ic-webapp
+      labels:
+        env: prod
+        app: ic-webapp
+        type: pod
+        createur: capgemini
+    spec:
+      containers:
+        - image: lianhuahayu/ic-webapp:1.0
+          name: ic-webapp
+          ports:
+            - containerPort: 8080
+          env:
+            - name: ODOO_URL
+              value: http://ec2-54-235-230-173.compute-1.amazonaws.com:32020
+            - name: PGADMIN_URL
+              value:  http://ec2-54-235-230-173.compute-1.amazonaws.com:32125

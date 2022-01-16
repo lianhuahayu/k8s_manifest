@@ -1,0 +1,15 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: pgadmin-pvc
+  namespace: icgroup
+  labels:
+    app: pgadmin
+    env: prod
+spec:
+  #storageClassName: aa
+  accessModes:
+    - "ReadWriteOnce"
+  resources:
+    requests:
+      storage: "3Gi"
