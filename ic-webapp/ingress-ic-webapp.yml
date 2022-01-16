@@ -10,7 +10,7 @@ metadata:
     createur: capgemini
 spec:
   rules:
-  - host: http://myapp.icgroup.com
+  - host: myapp.icgroup.com
     http:
       paths:
       - path: /
