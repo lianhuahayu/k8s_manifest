@@ -8,7 +8,7 @@
   sudo curl -fsSL https://get.docker.com -o get-docker.sh
   sudo sh get-docker.sh
   sudo usermod -aG docker ubuntu
-  systemctl start docker
+  sudo systemctl start docker
   sudo apt-get -y install wget
   sudo wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
   sudo chmod +x minikube-linux-amd64
@@ -17,6 +17,7 @@
   sudo chmod +x kubectl
   sudo mv kubectl  /usr/bin/
   sudo echo '1' > /proc/sys/net/bridge/bridge-nf-call-iptables
-  sudo chmod 666 /var/run/docker.sock
+  #sudo chmod 666 /var/run/docker.sock
   sudo systemctl enable docker.service
   minikube status
+  sudo sh -c "echo '$(curl ifconfig.me)'  http://myapp.icgroup.com" >> /etc/hosts
