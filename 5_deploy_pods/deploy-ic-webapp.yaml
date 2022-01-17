@@ -29,6 +29,6 @@ spec:
             - containerPort: 8080
           env:
             - name: ODOO_URL
-              value: http://ec2-54-235-230-173.compute-1.amazonaws.com:32020
+              value: http://<my_public_dns>:32020
             - name: PGADMIN_URL
-              value: http://ec2-54-235-230-173.compute-1.amazonaws.com:32125
+              value: http://<my_public_dns>:32125
