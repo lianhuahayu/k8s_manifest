@@ -23,7 +23,7 @@ spec:
         createur: capgemini
     spec:
       containers:
-        - image: lianhuahayu/ic-webapp:1.0
+        - image: lianhuahayu/ic-webapp:latest
           name: ic-webapp
           ports:
             - containerPort: 8080
