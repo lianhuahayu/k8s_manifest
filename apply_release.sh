@@ -23,11 +23,12 @@ kubectl apply -f /home/$(whoami)/prod/deploy/ic-webapp/$IMAGE_TAG/4_services
 
 #application des deployements et pods
 kubectl delete -f /home/$(whoami)/prod/deploy/ic-webapp/$IMAGE_TAG/5_deploy_pods
-sleep 40
+sleep 45
 docker image rmi lianhuahayu/ic-webapp:latest
 kubectl apply -f /home/$(whoami)/prod/deploy/ic-webapp/$IMAGE_TAG/5_deploy_pods
 
 #deploiements de l'ingress
 kubectl apply -f /home/$(whoami)/prod/deploy/ic-webapp/$IMAGE_TAG/6_ingress
+sleep 15
 
 exit 0
